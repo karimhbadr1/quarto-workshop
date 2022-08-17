@@ -1,0 +1,7 @@
+---
+title: karim1
+author: kb
+date: '`r format(Sys.time(), "%a %b %d %Y %H:%M:%S BST")`'
+---
+
+#hello

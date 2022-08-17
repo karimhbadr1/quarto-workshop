@@ -1,0 +1,64 @@
+---
+title: My First Quarto Notebook
+author: Karim Badr
+date: '`r format(Sys.time(),"%a %b %d %Y %H:%M:%S BST")`'
+engine: knitr
+format: 
+  html:
+    toc: true
+    toc-title: Table of Contents!
+    number-sections: true
+    df-print: paged
+    code-fold: true
+    fig-responsive: true
+---
+
+# Chunk 1
+
+```{python}
+import pandas as pd
+import numpy as np
+```
+
+## Chunk 1.1
+```{python}
+np.abs(-2.8)
+```
+
+# Chunk 2
+```{python}
+for i in range(5):
+  print(i)
+
+```
+
+# Chunk 3
+
+```{r}
+library(tidyverse)
+mtcars |> 
+  select(mpg)
+```
+```{r}
+a<-1:1000
+b<-as.data.frame(a)
+b
+```
+
+## Example Plot
+
+@plotlabel1 further explores the impact of temperature on ozone level.
+
+```{r}
+#| label: plotlabel1
+#| fig-cap: "Temperature vs Ozone Level"
+#| warning: false
+
+library(ggplot2)
+ggplot(airquality, aes(Temp, Ozone)) + 
+
+  geom_point() + 
+  geom_smooth(method = "loess"
+)
+```
+
